@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "author": "Contador de personas",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 120, "left": 60, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "sensor1", "top": -130, "left": -80, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "sensor2", "top": -130, "left": 130, "attrs": {} },
+    { "type": "wokwi-hc-sr04", "id": "sensor3", "top": -130, "left": 340, "attrs": {} },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": 40, "left": 370, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "sensor1:VCC", "red", [ "v0" ] ],
+    [ "uno:5V", "sensor2:VCC", "red", [ "v0" ] ],
+    [ "uno:5V", "sensor3:VCC", "red", [ "v0" ] ],
+    [ "uno:GND.1", "sensor1:GND", "black", [ "v0" ] ],
+    [ "uno:GND.1", "sensor2:GND", "black", [ "v0" ] ],
+    [ "uno:GND.1", "sensor3:GND", "black", [ "v0" ] ],
+    [ "uno:GND.1", "bz1:2", "black", [ "v0" ] ],
+    [ "uno:2", "sensor1:TRIG", "green", [ "v0" ] ],
+    [ "uno:3", "sensor1:ECHO", "blue", [ "v0" ] ],
+    [ "uno:4", "sensor2:TRIG", "green", [ "v0" ] ],
+    [ "uno:5", "sensor2:ECHO", "blue", [ "v0" ] ],
+    [ "uno:6", "sensor3:TRIG", "green", [ "v0" ] ],
+    [ "uno:7", "sensor3:ECHO", "blue", [ "v0" ] ],
+    [ "uno:8", "bz1:1", "orange", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
