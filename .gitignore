@@ -1,0 +1,10 @@
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+
+# Archivo de datos Excel (descomenta si prefieres no subir tus registros de prueba)
+# data/registro_personas.xlsx
+
+# Archivos de configuración de entorno
+.vscode/
+.env
