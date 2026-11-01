@@ -1,5 +1,3 @@
----
-
 # 🚶‍♂️ numIN - Contador de Personas Inteligente
 
 **numIN** es un sistema de conteo de aforo y flujo de personas basado en hardware abierto. Utiliza un microcontrolador **Arduino UNO**, tres sensores ultrasónicos independientes para monitorear diferentes accesos/carriles, retroalimentación sonora inmediata (buzzer) y un servidor en **Python** que consolida el registro de accesos en tiempo real dentro de una hoja de cálculo de Microsoft Excel (`.xlsx`).
