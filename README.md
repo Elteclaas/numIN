@@ -62,7 +62,6 @@ numIN/
 ├── LICENSE                      # Licencia MIT
 └── README.md                    # Documentación del proyecto
 ```
-
 ---
 
 ## ⚙️ Puesta en Marcha
