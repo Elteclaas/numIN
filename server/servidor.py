@@ -7,7 +7,10 @@ from openpyxl import Workbook, load_workbook
 # Configuración con RFC2217 hacia Wokwi
 DIRECCION_WOKWI = 'rfc2217://localhost:4000'
 BAUDIOS = 9600
-NOMBRE_EXCEL = "registro_personas.xlsx"
+
+# Guarda el archivo dentro de la carpeta data/
+DIRECTORIO_ACTUAL = os.path.dirname(os.path.abspath(__file__))
+NOMBRE_EXCEL = os.path.join(DIRECTORIO_ACTUAL, "..", "data", "registro_personas.xlsx")
 
 # Inicializar o verificar archivo Excel
 if not os.path.exists(NOMBRE_EXCEL):
