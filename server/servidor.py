@@ -10,7 +10,7 @@ from openpyxl import Workbook, load_workbook
 # ==============================================================================
 # Cambia 'COM3' por el puerto donde se conectó tu Arduino en tu PC
 # (En Linux o Mac suele ser algo como '/dev/ttyUSB0' o '/dev/ttyACM0')
-PUERTO_SERIAL = 'COM3'  
+PUERTO_SERIAL = 'COM5'  
 BAUDIOS = 9600
 
 # Ruta automática hacia la carpeta data/
@@ -68,10 +68,10 @@ try:
                     ws.append([total_personas, fecha_str, hora_str, linea, 1])
                     wb.save(RUTA_EXCEL)
                 except PermissionError:
-                    print("⚠️ ALERTA: Cierra el archivo de Excel en tu computadora para permitir guardar los datos.")
+                    print("ALERTA: Cierra el archivo de Excel en tu computadora para permitir guardar los datos.")
 
 except serial.SerialException as e:
-    print(f"\n❌ Error al abrir el puerto {PUERTO_SERIAL}: {e}")
+    print(f"\n Error al abrir el puerto {PUERTO_SERIAL}: {e}")
     print("\n--- Puertos COM disponibles detectados en tu equipo ---")
     puertos = serial.tools.list_ports.comports()
     if puertos:
